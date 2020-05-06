@@ -1,0 +1,85 @@
+.block{
+	background-color: rgba(219, 219, 219, 0.7);
+	padding: 80px;
+	margin-top: 80px;
+	margin-left: 120px;
+	margin-right: 120px;
+	margin-bottom: 80px;
+
+}
+
+#presentation{
+	background-color: rgba(36, 36, 36, 0.85);	
+    margin: 0 auto;
+    padding: 15px;
+    height: 200px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    color: white;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(36, 36, 36);
+    position: relative;
+}
+
+#description{
+	background-color: white;	
+    margin: 0 auto;
+    padding: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: rgb(219, 219, 219);
+    
+    
+}
+
+#identity{
+	margin-bottom: 20px;
+}
+
+#contact{
+	font-size: 20px;
+	font-family: verdana, sans-serif;
+	line-height: 1.6;
+}
+#name {
+	font-weight: bold;
+	font-size: 35px;
+	font-family: verdana, sans-serif;
+}
+
+#job {
+	font-style: italic;
+	font-size: 25px;
+	font-family: verdana, sans-serif;
+}
+
+#photo {
+	width:190px;
+	height:100%;
+	position:absolute;
+	right: 0px;
+	top: 0px;
+	bottom:10px;
+
+}
+
+#menu {
+	margin-left: 50px;
+}
+
+.menuButton {
+  background-color: rgba(36, 36, 36, 0.6);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+}
+
+.menuButton:hover{
+  background-color: black;
+}

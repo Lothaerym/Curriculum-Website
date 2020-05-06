@@ -1,0 +1,26 @@
+
+<!-- Page "Connexion de l'administrateur" -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="css/styleAdmin.css">
+    <title>Administration</title>
+</head>
+
+<body>
+	<section>
+		<div class="register-wrapper">
+			<div class="register-block">
+				<h3 class="register-title">Administration</h3>
+				<p>Connexion administrateur</p>
+				<form th:action="@{/validation}" th:object="${admin}" method="post">
+					<input type="text" th:field="*{name}" placeholder="Nom"/>
+					<input type="text" th:field="*{pwd}" placeholder="Mot de passe" />
+					<input type="submit" value="Connexion"/>
+				</form>
+			</div>
+		</div>
+	</section>
+</body>
