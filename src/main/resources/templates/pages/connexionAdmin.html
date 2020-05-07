@@ -15,12 +15,13 @@
 			<div class="register-block">
 				<h3 class="register-title">Administration</h3>
 				<p>Connexion administrateur</p>
-				<form th:action="@{/validation}" th:object="${admin}" method="post">
+				<form th:action="@{/verif}" th:object="${admin}" method="post">
 					<input type="text" th:field="*{name}" placeholder="Nom"/>
 					<input type="text" th:field="*{pwd}" placeholder="Mot de passe" />
 					<input type="submit" value="Connexion"/>
 				</form>
 			</div>
+			<p> <a href="/"> Retour </a> </p>
 		</div>
 	</section>
 </body>

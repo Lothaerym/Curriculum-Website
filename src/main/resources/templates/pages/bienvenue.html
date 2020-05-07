@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="css/styleBienvenue.css">
+    <title>Bienvenue</title>
+</head>
+
+<body>
+	<div id="message">
+		<div id="welcome"> Bienvenue </div> 
+		<div th:text="${adminName}" id="name"></div>
+		<div> <button type="button" class="menuButton" onclick="location.href='/'">Retour</button></div>
+	</div>
+</body>

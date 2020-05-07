@@ -83,3 +83,10 @@
 .menuButton:hover{
   background-color: black;
 }
+
+#authLink{
+	position: absolute;
+	right: 180px;
+	color: grey;
+	text-decoration:none;
+}
