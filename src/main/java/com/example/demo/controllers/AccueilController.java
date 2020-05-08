@@ -10,6 +10,7 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -26,11 +27,15 @@ import org.hibernate.*;
 public class AccueilController {
 	
 	@GetMapping("/")
-	public String home(HttpServletRequest request, HttpServletResponse response, HttpSession session) {
+	public String home(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model) {
 		
 		// test session
-		Boolean isAdmin = (Boolean) session.getAttribute("isAdmin?");
-		System.out.println(isAdmin);
+		Boolean isAdmin = false;
+		isAdmin = (Boolean) session.getAttribute("isAdmin?");
+		model.addAttribute("isadmin", isAdmin );
+
+		
+		session.removeAttribute("isAdmin?");
 		
 		/*
         Session sessiona = HibernateUtil.getSessionFactory().openSession();

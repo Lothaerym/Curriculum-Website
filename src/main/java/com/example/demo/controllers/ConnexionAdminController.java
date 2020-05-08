@@ -69,20 +69,27 @@ public class ConnexionAdminController {
     }
     
     @RequestMapping(value="/login", method = RequestMethod.POST)
-    public String login(@ModelAttribute Administrator admin, Model model) {
+    public String login(@ModelAttribute Administrator admin, Model model, HttpServletRequest request) {
 
     	model.addAttribute("admin", new Administrator());
     	
+    	// récup des infos sur l'admin
     	Session session = HibernateUtil.getSessionFactory().openSession();
     	Query q = session.createQuery("From Administrator ");
     	List<Administrator> resultList = q.list();
     	
         for (Administrator next : resultList) {
+        	// comparaison avec bdd
             if(next.getName().equals(admin.getName()) && next.getPwd().equals(admin.getPwd())) {
             	model.addAttribute("adminName", admin.getName());
+            	//mode admin
+            	request.getSession().setAttribute("isAdmin?", true);
+            	request.getSession().setAttribute("adminName", admin.getName());
+            	
             	return "pages/bienvenue";
             };
         }
+        // erreur de saisie
         model.addAttribute("invalidCredentials", true);
         return "pages/connexionAdmin";
     }
