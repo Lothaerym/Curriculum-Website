@@ -30,8 +30,7 @@ public class AccueilController {
 	public String home(HttpServletRequest request, HttpServletResponse response, HttpSession session, Model model) {
 		
 		// test session
-		Boolean isAdmin = false;
-		isAdmin = (Boolean) session.getAttribute("isAdmin?");
+		Boolean isAdmin = (Boolean) session.getAttribute("isAdmin?");
 		model.addAttribute("isadmin", isAdmin );
 
 		

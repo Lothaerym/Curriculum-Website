@@ -11,6 +11,6 @@
 			<td> <button type="button" class="menuButton" onclick="location.href='/contact'">Contact</button> </td>
 		</tr>
 	</table>
-	<a th:href="@{/login}" id="authLink">Administrateur</a>
 	<p th:if="${isadmin}" class="error"><a th:href="@{/disconnect}" id="authLink">Deconnection</a></p>
+	<p th:if="${isadmin} == null" class="error"><a th:href="@{/login}" id="authLink">Administrateur</a></p>
 </div>
