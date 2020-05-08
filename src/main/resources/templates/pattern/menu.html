@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
 <div id="menu">
 	<table> 
 		<tr>
@@ -8,5 +11,5 @@
 			<td> <button type="button" class="menuButton" onclick="location.href='/contact'">Contact</button> </td>
 		</tr>
 	</table>
-	<a href="/authentification" id="authLink"> Administrateur </a>
+	<a th:href="@{/login}" id="authLink">Administrateur</a>
 </div>
