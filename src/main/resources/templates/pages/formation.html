@@ -11,8 +11,19 @@
 	<div class="block">
 		<div th:include="pattern/presentation"></div>
 		
-		<div> Page des formations</div>
+		<div id="description"> 
+			<div id="title"> Formations</div>
 		
+			<div id="items" th:block th:each="formation : ${resultList}">
+				<div th:if="${isadmin}" id="edit"><a th:href="@{/editFormation/{id}(id=${formation.id})}">Modifier la presentation</a></div>	
+     			<div id= "formaTitle" th:text="${formation.title}"></div>
+     			<div id= "formaDate" th:text="${formation.date}"></div>
+ 				<div id= "formaSchool" th:text="${formation.school}"></div>
+ 				<div id= "formaDescription" th:text="${formation.description}"></div>
+			</div>
+			
+			<div th:if="${isadmin}" id="edit"><a href="/createFormation">Creer une formation</a></div>
+		</div>
 		<div th:include="pattern/menu"></div>
 	</div>
 </body>

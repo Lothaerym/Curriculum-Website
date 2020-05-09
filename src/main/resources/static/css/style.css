@@ -96,3 +96,18 @@
 	color: grey;
 	font-style: italic;
 }
+
+#title{
+	font-size: 3em;
+	color: grey;
+}
+
+#items{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+#formaTitle{
+	font-size: 2em;
+	
+}
