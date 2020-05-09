@@ -1,12 +1,13 @@
 		<div id="presentation">  
 			<div id="identity"> 
-				<div id="name"> DELHAYE Thomas </div>
-				<div id="job"> D&eacute;veloppeur J2EE </div>
+				<div id="name"> <div th:text="${presName}"></div> </div>
+				<div id="job"> <div th:text="${presJob}"></div> </div>
 			</div>
 			<div id="contact">
-				thomas.del.haye@outlook.fr <br>
-				06 68 97 83 93 <br>
-				29 rue Jean Jaur&egrave;s 
+				<div th:text="${presEmail}"></div>
+				<div th:text="${presNumber}"></div> 
+				<div th:text="${presAddress}"></div> 
+				<a th:href="${presGithub}" id="git"><div th:text="${presGithub}"></div></a> 
 			</div>
 			<img id="photo" src="img/th.jpg">
 		</div>	

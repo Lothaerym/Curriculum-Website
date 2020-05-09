@@ -12,7 +12,7 @@
 	background-color: rgba(36, 36, 36, 0.85);	
     margin: 0 auto;
     padding: 15px;
-    height: 200px;
+    height: 220px;
     margin-left: 50px;
     margin-right: 50px;
     margin-bottom: 20px;
@@ -89,4 +89,10 @@
 	right: 180px;
 	color: grey;
 	text-decoration:none;
+}
+
+#git{
+	text-decoration:none;
+	color: grey;
+	font-style: italic;
 }

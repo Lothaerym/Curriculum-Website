@@ -16,7 +16,7 @@ public class Disconnect {
 			
 		session.removeAttribute("isAdmin?");
 		
-		return "pages/home";
+		return "redirect:/";
 	}
 	
 }
