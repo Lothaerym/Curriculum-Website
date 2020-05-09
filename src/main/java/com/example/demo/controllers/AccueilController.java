@@ -35,8 +35,7 @@ public class AccueilController {
 		model.addAttribute("isadmin", isAdmin );
 
 		
-		session.removeAttribute("isAdmin?");
-		
+		//session.removeAttribute("isAdmin?");		
 
 		
         Session sessiona = HibernateUtil.getSessionFactory().openSession();

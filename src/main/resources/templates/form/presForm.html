@@ -1,0 +1,30 @@
+<!-- Page "Connexion de l'administrateur" -->
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="css/styleAdmin.css">
+    <title>Administration</title>
+</head>
+
+<body>
+	<section>
+		<div class="register-wrapper">
+			<div class="register-block">
+				<h3 class="register-title">Editer Presentation</h3>
+				<form th:action="@{/editPres}" th:object="${presentation}" method="post">
+					<input type="text" th:field="*{name}" placeholder="Nom"/>
+					<input type="text" th:field="*{job}" placeholder="Métier"/>
+					<input type="text" th:field="*{email}" placeholder="Adresse mail"/>					
+					<input type="text" th:field="*{number}" placeholder="Numéro de telephone"/>					
+					<input type="text" th:field="*{address}" placeholder="Adresse"/>	
+					<input type="text" th:field="*{github}" placeholder="Github"/>		
+					<textarea rows="20" cols="80" th:field="*{description}" placeholder="Description"></textarea>				
+					<input type="submit" value="Modifier"/>
+				</form>
+			</div>
+			<p> <a href="/"> Retour </a> </p>
+		</div>
+	</section>
+</body>

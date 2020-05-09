@@ -14,6 +14,7 @@
 		<div id="description"> 
 			<div th:text="${presDescription}"></div>
 		</div>
+		<div th:if="${isadmin}" id="edit"><a href="/editPres">Modifier la presentation</a></div>
 		
 		<div th:include="pattern/menu.html"></div>
 	</div>
