@@ -20,6 +20,7 @@
     	
      	<mapping class="com.example.demo.bean.Administrator" />
      	<mapping class="com.example.demo.bean.Presentation" />
-     	
+     	<mapping class="com.example.demo.bean.Formation" />
+     	     	
     </session-factory>
 </hibernate-configuration>
