@@ -15,11 +15,12 @@
 			<div id="title"> Formations</div>
 		
 			<div id="items" th:block th:each="formation : ${resultList}">
+				<div id= "separator" th:text="----------------------------"></div>
 				<div th:if="${isadmin}" id="edit"><a th:href="@{/editFormation/{id}(id=${formation.id})}">Modifier la presentation</a></div>	
      			<div id= "formaTitle" th:text="${formation.title}"></div>
      			<div id= "formaDate" th:text="${formation.date}"></div>
  				<div id= "formaSchool" th:text="${formation.school}"></div>
- 				<div id= "formaDescription" th:text="${formation.description}"></div>
+ 				<div id= "formaDescription" th:utext="${formation.description}"></div>
 			</div>
 			
 			<div th:if="${isadmin}" id="edit"><a href="/createFormation">Creer une formation</a></div>

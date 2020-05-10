@@ -21,6 +21,8 @@
      	<mapping class="com.example.demo.bean.Administrator" />
      	<mapping class="com.example.demo.bean.Presentation" />
      	<mapping class="com.example.demo.bean.Formation" />
-     	     	
+     	<mapping class="com.example.demo.bean.Experience" />
+     	<mapping class="com.example.demo.bean.Competence" />
+     	     	     	
     </session-factory>
 </hibernate-configuration>

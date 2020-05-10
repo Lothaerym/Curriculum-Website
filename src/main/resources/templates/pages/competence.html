@@ -11,7 +11,35 @@
 	<div class="block">
 		<div th:include="pattern/presentation"></div>
 		
-		<div> Page des competence</div>
+		<div id="description"> 
+			<div id="title"> Competences </div>	
+				<div th:if="${isadmin}" id="edit"><a th:href="@{/editComp}">Modifier la competence</a></div>	
+				
+				<table id="tableComp">
+					<tr>
+						<td>
+							<div id="subtitle">Programmation</div>
+ 							<div id= "compProgrammation" th:utext="${compProg}"></div>
+						</td>
+						<td>
+ 							<div id="subtitle">Data</div>
+ 							<div id= "compData" th:utext="${compData}"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>	
+ 							<div id="subtitle">Frameworks</div>
+ 							<div id= "compFrameworks" th:utext="${compFram}"></div>							
+						</td>
+						<td>
+ 							<div id="subtitle">Autres</div>
+ 							<div id= "compAutres" th:utext="${compAutres}"></div>	
+						</td>
+					<tr>
+					
+				</table>
+	
+			</div>
 		
 		<div th:include="pattern/menu"></div>
 	</div>

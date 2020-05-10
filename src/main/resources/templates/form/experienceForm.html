@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+	<link rel="stylesheet" href="css/styleAdmin.css">
+    <title>Administration</title>
+</head>
+
+<body>
+	<section>
+		<div class="register-wrapper">
+			<div class="register-block">
+				<h3 class="register-title">Creer Experience</h3>
+				<form th:action="@{/createExperience}" th:object="${experience}" method="post">
+					<input type="text" th:field="*{employer}" placeholder="Employeur"/>
+					<input type="text" th:field="*{adress}" placeholder="Lieu"/>
+					<input type="text" th:field="*{date}" placeholder="Date"/>				
+					<textarea rows="20" cols="80" th:field="*{description}" placeholder="Description"></textarea>				
+					<input type="submit" value="Create"/>
+				</form>
+			</div>
+			<p> <a href="/"> Retour </a> </p>
+		</div>
+	</section>
+</body>

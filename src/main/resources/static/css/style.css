@@ -59,7 +59,7 @@
 }
 
 #photo {
-	width:190px;
+	width:200px;
 	height:100%;
 	position:absolute;
 	right: 0px;
@@ -110,4 +110,75 @@
 #formaTitle{
 	font-size: 2em;
 	
+}
+
+#formaDate{
+	font-style: italic;
+}
+
+#formaSchool{
+	padding: 5px;
+	font-size: 1.5em;
+}
+
+#formaDescription{
+	padding: 5px;
+}
+
+#separator{
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+
+#expeEmployer{
+	font-size: 2em;
+	
+}
+
+#expeDate{
+	font-style: italic;
+}
+
+#expeAdress{
+	padding: 5px;
+	font-size: 1.5em;
+}
+
+#expeDescription{
+	padding: 5px;
+}
+
+#subtitle{
+	font-size: 2em;
+	color: grey;
+}
+
+#compProgrammation{
+	padding: 5px;
+	
+}
+
+#compData{
+	text-align: top;
+	padding: 5px;
+	
+}
+
+#compFrameworks{
+	padding: 5px;
+	
+}
+
+#compAutres{
+	padding: 5px;
+	
+}
+
+#tableComp{
+	width: 50%;
+}
+td	{
+	vertical-align: top;
 }

@@ -11,7 +11,20 @@
 	<div class="block">
 		<div th:include="pattern/presentation"></div>
 		
-		<div> Page des experiences</div>
+		<div id="description"> 
+			<div id="title"> Experiences </div>
+		
+			<div id="items" th:block th:each="experience : ${resultList}">
+				<div id= "separator" th:text="----------------------------"></div>
+				<div th:if="${isadmin}" id="edit"><a th:href="@{/editExperience/{id}(id=${experience.id})}">Modifier la experience</a></div>	
+     			<div id= "expeEmployer" th:utext="${experience.employer}"></div>
+     			<div id= "expeAdress" th:utext="${experience.adress}"></div>
+     			<div id= "expeDate" th:utext="${experience.date}"></div>
+ 				<div id= "expeDescription" th:utext="${experience.description}"></div>
+			</div>
+			
+			<div th:if="${isadmin}" id="edit"><a href="/createExperience">Creer une experience</a></div>
+		</div>
 		
 		<div th:include="pattern/menu"></div>
 	</div>
